@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai and code</title>
+</head>
+<body style="background-color: black; color: white;">
+   
+      <div class="parent">
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">thirsday</div>
+        <div class="day">friday</div>
+      </div>
+    
+</body>
+<script>
+    const parent=document.querySelector('.parent')
+    // console.log(parent)
+    // console.log(parent.children);//give html collection like array and by indixing we can get its children ..
+    // console.log(parent.children[1].innerHTML);//tuesday
+
+//    for (let i = 0; i < parent.children.length; i++) {
+//     const element = parent.children[i];
+//     console.log(element.innerHTML);
+    
+//    }
+   parent.children[1].style.color="orange"
+   console.log(parent.children[1]);
+   console.log(parent.firstElementChild);
+   console.log(parent.lastElementChild);//<div class="day">monday</div>
+  const dayone=document.querySelector(".day")//return only first children which has class day
+  console.log(dayone);
+  console.log(dayone.parentElement);
+  console.log(dayone.nextElementSibling);
+  console.log("nodes:",parent.childNodes);//include all total 9 {NodeList(9) [text,div.day,txt  and so on..
+    
+
+
+</script>
+</html>

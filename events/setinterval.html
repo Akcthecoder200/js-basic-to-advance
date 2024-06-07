@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setinterval</title>
+</head>
+<body>
+    <h1>js script is best..</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const start=document.querySelector('#start')
+    const stop=document.querySelector('#stop')
+    let intervalid;
+    const saydate=(str) => {
+        console.log(str,Date.now());
+    }
+    
+    // console.log(intervalid);
+    start.addEventListener('click',function(){
+       if(intervalid){
+        clearInterval(intervalid)
+       };
+       intervalid=setInterval(saydate,1000,"hi")
+        //console.log(intervalid);
+            
+    })
+    stop.addEventListener('click',function(){
+        
+       clearInterval(intervalid)
+       intervalid=null
+
+    })
+    
+   
+    
+    //clearInterval(intervalid)
+</script>
+</html>
